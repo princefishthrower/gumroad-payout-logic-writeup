@@ -39,10 +39,10 @@ Here, `seller_id` and `last_payment_calculation_executed` are variables that wou
 We'll also need an UPDATE query to be able to update when the last payment calculation was executed.
 
 ```sql
-UPDATE SET last_payment_calculation_executed=calculation_executed sellers WHERE seller_id = seller_id
+UPDATE SET last_payment_calculation_executed=last_payment_calculation_executed sellers WHERE seller_id = seller_id
 ```
 
-This query would require a `calculation_executed` datetime, and the seller's ID `seller_id`.
+Here, `last_payment_calculation_executed` and `seller_id` are the variables that would be passed into this query.
 
 # Main Program Logic (JavaScript Pseudo Code)
 
